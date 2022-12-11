@@ -1,13 +1,22 @@
-import React, { useContext } from 'react';
+import React, { Fragment } from 'react';
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import './App.css';
-import Home from './components/Home/Home';
+import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage';
 
 const logo: string = require("./logo.svg").default;
 
-function App() {
+const App = () => {
     return (
-        <Home />
+        <Router>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                </Routes>
+            </Layout>
+        </Router >
+
     );
-}
+};
 
 export default App;
