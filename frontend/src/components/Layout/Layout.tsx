@@ -8,7 +8,6 @@ const Layout = (props: any) => {
     return (
         <Fragment>
             <NavigationBar />
-
             <div className="container">{props.children}</div>
         </Fragment>
     );
