@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
+import Home from './components/Home/Home';
 
 const logo: string = require("./logo.svg").default;
 
 
 
 function App() {
+    return (
+        <Home />
+    );
+
+    /*
+    //const authContext = useContext(AuthContext);
     return (
         <div className="App" >
             <header className="App-header" >
@@ -24,6 +31,7 @@ function App() {
             </header>
         </div>
     );
+    */
 }
 
 export default App;
