@@ -1,6 +1,7 @@
 package server
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -13,9 +14,9 @@ func DefineRouter() *mux.Router {
 
 	// Subrouter with prefix
 	api := router.PathPrefix("/api").Subrouter()
-	api.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`{"msg":"hello"}`))
+	api.HandleFunc("/signup", func(w http.ResponseWriter, r *http.Request) {
+		//user := new(store.User)
+		log.Printf("%+v", r)
 	})
 
 	return router
